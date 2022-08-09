@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock</title>
+</head>
+<body>
+    <div style="color: orangered;">
+        <h1>Stock Cluster</h1>
+        <form action="{{ url_for('predict')}}" method="POST">
+            <input type="text" name="SP500" id="p" placeholder="SP500">
+            <br>
+            <input type="text" name="NASDAQ_ADI" id="h" placeholder="NASDAQ_ADI">
+            <br>
+            <input type="text" name="NASDAQ_AMD" id="b" placeholder="NASDAQ_AMD">
+            <br>
+            <input type="text" name="NASDAQ_INCY" id="r" placeholder="NASDAQ_INCY">
+            <br>
+            <input type="text" name="NYSE_EXR" id="st" placeholder="NYSE_EXR">
+            <br>
+            <hr>
+            <button type="submit" id="sub">
+                <b>
+                    Predict Cluster
+                </b>
+                </button>
+        </form>
+
+    </div>
+    <br><br>
+    <b>
+        <i>
+            Survived : {{predection_eval}}
+        </i>
+    </b>
+    <hr>
+    <a href="https://github.com/vijit200/Stock-Cluster" target="_main">
+        <img src="https://www.bing.com/th?id=OIP.NGIDdVP6vw9ue_D-mrEVFQHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.25&pid=3.1&rm=2" alt="vijit_github" width="40px">
+    </a>
+</body>
+</html>
